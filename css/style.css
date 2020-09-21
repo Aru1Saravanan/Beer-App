@@ -1,1 +1,253 @@
-/* No CSS */
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@200;400;700;900&family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #f2f2f2;
+  color: rgba(0, 0, 16, 0.8);
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  padding: 1em 2em;
+  background: #0365c0;
+  color: #f2f2f2;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.container {
+  padding: 1em 2em;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 16, 0.19), 0 0.3rem 0.3rem rgba(0, 0, 16, 0.23);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 16, 0.19), 0 0.3rem 0.3rem rgba(0, 0, 16, 0.23);
+}
+
+.filters {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  margin-bottom: 1em;
+}
+
+.filter-card {
+  padding: 0.8em;
+  border-radius: 7px;
+}
+
+.filter-container {
+  padding: 0.4em 0.8em;
+}
+
+.filter-text p {
+  color: rgba(0, 0, 16, 0.8);
+  font-size: 1.3rem;
+  padding: 0.3em;
+  font-weight: 500;
+}
+
+.filter {
+  background-color: rgba(0, 0, 16, 0.8);
+  padding: 0.4em 0.4em 0.1em 0.4em;
+  border: 3px solid #0365c0;
+  border-radius: 2.2rem;
+}
+
+.filter-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filter-all + span {
+  font-size: 2rem;
+  padding: 0.5em 1em;
+  color: #f2f2f2;
+}
+
+svg {
+  fill: #f2f2f2;
+  height: 2rem;
+  width: 2rem;
+  margin: 0.5em;
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+input + span,
+input + svg {
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.filter-all:hover,
+.filter-all:checked + span,
+.filter-all:focus + span {
+  color: #0365c0;
+}
+
+.beer:hover,
+.beer:checked + svg,
+.beer:focus + svg {
+  fill: #ffb144;
+}
+
+.hops:hover,
+.hops:checked + svg,
+.hops:focus + svg {
+  fill: #00cc4f;
+}
+
+.page-btn {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 2rem;
+  border-radius: 50%;
+  padding: 0.25em;
+  color: #f2f2f2;
+  cursor: pointer;
+  -webkit-transition: color 0.25s ease;
+  transition: color 0.25s ease;
+}
+
+.page-btn:hover {
+  color: #0365c0;
+}
+
+.page-btn:disabled {
+  cursor: default;
+  color: rgba(0, 0, 16, 0.3);
+}
+
+.beers {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1em;
+}
+
+.beer-wrapper {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+}
+
+.beers .beer {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1fr;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 2em;
+  text-align: center;
+  width: 100%;
+}
+
+.beer .beer__img {
+  margin: auto;
+  height: 20em;
+}
+
+.beer .beer__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.beer__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1.5em;
+  width: calc(100% - (1.5rem * 2));
+  height: calc(100% - (1.5rem * 2));
+  background: #fff;
+  overflow: auto;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
+}
+
+.beer__content:hover {
+  opacity: 0.92;
+}
+
+.beer__name {
+  margin: 0 auto 0.5em auto;
+  font-family: "Martel", serif;
+  font-size: 2.4rem;
+  line-height: 1.07em;
+  letter-spacing: -0.015em;
+}
+
+.beer__tagline {
+  padding-bottom: 0.5em;
+  font-family: "Martel", serif;
+  font-style: italic;
+  border-bottom: 2px solid #0365c0;
+}
+
+.beer__description {
+  margin: 1em 0;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+}
+
+.beer__food-pairing {
+  font-style: italic;
+  font-size: 0.9rem;
+  line-height: 1.3em;
+}
